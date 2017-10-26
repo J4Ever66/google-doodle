@@ -13,3 +13,6 @@ The greatest inventor to ever live thus far. Constantly oppressed by the constri
 
 
 ![Nikola Tesla](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/N.Tesla.JPG/220px-N.Tesla.JPG)
+![Nikola Tesla - Video](https://www.biography.com/people/nikola-tesla-9504443)
+
+
