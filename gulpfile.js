@@ -7,9 +7,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
-
-
-
 gulp.task('imagemin', function () {
     return gulp.src('./img/*')
         .pipe(imagemin({
@@ -19,7 +16,6 @@ gulp.task('imagemin', function () {
         }))
         .pipe(gulp.dest('./img'));
 });
-
 
 gulp.task('sass', function () {
   gulp.src('./scss/**/*.scss')
@@ -32,8 +28,8 @@ gulp.task('sass', function () {
 
 
 gulp.task('uglify', function() {
-  gulp.src('./lib/*.js')
-    .pipe(uglify('main.js'))
+  gulp.src('./js/src/*.js')
+    .pipe(uglify('core.js'))
     .pipe(gulp.dest('./js'))
 });
 
@@ -41,8 +37,8 @@ gulp.task('watch', function(){
     livereload.listen();
 
     gulp.watch('./scss/**/*.scss', ['sass']);
-    gulp.watch('./lib/*.js', ['uglify']);
-    gulp.watch(['./css/style.css', './**/*.twig', './js/*.js'], function (files){
+    gulp.watch('./js/src/*.js', ['uglify']);
+    gulp.watch(['./css/style.css', './js/core.js'], function (files){
         livereload.changed(files)
     });
 });
